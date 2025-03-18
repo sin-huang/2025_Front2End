@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>school_timetable</title>
+    <link rel="stylesheet" href="0310.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>授課教師</td>
+                <td>時段</td>
+                <td>節次</td>
+                <td class="diagonal_line" colspan="2">
+                    <div>
+                        <p style="text-align: right">星期</p>
+                        <p style="text-align: left">時間</p>
+                    </div>
+                </td>
+                <td>一</td>
+                <td>二</td>
+                <td>三</td>
+                <td>四</td>
+                <td>五</td>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <!--也可以設定padding 但這樣易讀 所以用這個方法-->
+                <td rowspan="15" style="width: 70px;">
+                    【國語】
+                    【數學】
+                    【社會】
+                    【綜合】
+                    李昀軒
+                    <br>
+                    <br>
+                    【英語】
+                    陳巧慧
+                    <br>
+                    <br>
+                    【自然】
+                    蔣良修
+                    <br>
+                    <br>
+                    【美勞】
+                    蔡秀婷
+                    <br>
+                    <br>
+                    【音樂】
+                    蘇敬堯
+                    <br>
+                    <br>
+                    【體育】
+                    林俊良
+                    <br>
+                    <br>
+                    【健康】
+                    柯雯婷
+                    <br>
+                    <br>
+                    【電腦】
+                    曾瑞斌
+                    <br>
+                    <br>
+                    【母語】
+                    黄振彬
+                </td>
+                <td rowspan="8">
+                    <p class="period">上</p>
+                    <p class="period">午</p>
+                </td>
+                <td rowspan="2"></td>
+                <td rowspan="2">07:50|08:00</td>
+                <td class="time_style" rowspan="2">10</td>
+                <td class="course_style">運動服</td>
+                <td class="course_style">制服</td>
+                <td class="course_style">便服</td>
+                <td class="course_style">運動服</td>
+                <td class="course_style">制服</td>
+            </tr>
+            <tr>
+                <td class="course_style letter_spacing text_align" colspan="5">晨光活動</td>
+            </tr>
+            <tr>
+                <td class="bold">0</td>
+                <td>08:00|08:40</td>
+                <td class="time_style">40</td>
+                <td class="course_style">戶外朝會</td>
+                <td class="course_style">室內朝會</td>
+                <td class="course_style">社會</td>
+                <td class="course_style">深耕閱讀</td>
+                <td class="course_style">室內朝會</td>
+            </tr>
+            <tr>
+                <td class="bold">1</td>
+                <td>08:45|09:25</td>
+                <td class="time_style">40</td>
+                <td class="course_style">數學</td>
+                <td class="course_style">綜合</td>
+                <td class="course_style">自然</td>
+                <td class="course_style">數學</td>
+                <td class="course_style">數學</td>
+            </tr>
+            <tr>
+                <td class="bold">2</td>
+                <td>09:35|10:15</td>
+                <td class="time_style">40</td>
+                <td class="course_style">英語</td>
+                <td class="course_style">綜合</td>
+                <td class="course_style">自然</td>
+                <td class="course_style">健康</td>
+                <td class="course_style">國語</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>10:15|10:35</td>
+                <td class="time_style">20</td>
+                <td class="course_style letter_spacing text_align" colspan="5">課間活動</td>
+            </tr>
+            <tr>
+                <td class="bold">3</td>
+                <td>10:35|11:15</td>
+                <td class="time_style">40</td>
+                <td class="course_style">國語</td>
+                <td class="course_style">母語</td>
+                <td class="course_style">數學</td>
+                <td class="course_style">國語</td>
+                <td class="course_style">美勞</td>
+            </tr>
+            <tr>
+                <td class="bold">4</td>
+                <td>11:25|12:05</td>
+                <td class="time_style">40</td>
+                <td class="course_style">國語</td>
+                <td class="course_style">國語</td>
+                <td class="course_style">國語</td>
+                <td class="course_style">英語</td>
+                <td class="course_style">美勞</td>
+            </tr>
+            <tr>
+                <td rowspan="7">
+                    <p class="period">下</p>
+                    <p class="period">午</p>
+                </td>
+                <td></td>
+                <td>12:05|12:35</td>
+                <td class="time_style">30</td>
+                <td class="course_style letter_spacing text_align" colspan="5">午餐時間</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>12:35|13:20</td>
+                <td class="time_style">45</td>
+                <td class="course_style letter_spacing text_align" colspan="5">午間靜息</td>
+            </tr>
+            <tr>
+                <td class="bold">5</td>
+                <td>12:30|14:10</td>
+                <td class="time_style">40</td>
+                <td class="course_style">綜合</td>
+                <td class="course_style">英文</td>
+                <td class="course_style"></td>
+                <td class="course_style">社會</td>
+                <td class="course_style"></td>
+            </tr>
+            <tr>
+                <td class="bold">6</td>
+                <td>14:20|15:00</td>
+                <td class="time_style">40</td>
+                <td class="course_style">體育</td>
+                <td class="course_style">電腦</td>
+                <td class="course_style"></td>
+                <td class="course_style">音樂</td>
+                <td class="course_style"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>15:00|15:20</td>
+                <td class="time_style">20</td>
+                <td class="course_style letter_spacing text_align" colspan="5">整潔活動</td>
+            </tr>
+            <tr>
+                <td class="bold">7</td>
+                <td>15:20|16:00</td>
+                <td class="time_style">40</td>
+                <td class="course_style">自然</td>
+                <td class="course_style">社會</td>
+                <td class="course_style"></td>
+                <td class="course_style">體育</td>
+                <td class="course_style"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>16:00|16:10</td>
+                <td class="time_style">10</td>
+                <td class="course_style letter_spacing text_align" colspan="5">放學</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

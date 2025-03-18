@@ -1,0 +1,132 @@
+html, body{
+    background-color: #F0EBF8;
+    overflow: auto;
+    height: 100%;
+    margin: 0;
+}
+
+h1{
+    font-size: 45px;
+}
+
+select{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border: 1px solid #5F6368;
+    margin-bottom: 10px;
+    outline: none;
+    opacity: 0.5;
+    border-radius: 8px;
+}
+
+hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #5F6368;
+    opacity: 0.5;
+}
+
+p, div, span, input, label, option{
+    font-size: 20px;
+    font-weight: 525;
+}
+
+.input_info{
+    width: 350px;
+    border: none;
+    border-bottom: 2px solid #5F6368;
+    margin-bottom: 10px;
+    outline: none; /* 移除輸入框聚焦時的外邊框 */
+    opacity: 0.6;
+}
+
+section{
+    background-color: white;
+    padding: 12px;
+    border: 1px solid #DADCE0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 800px;
+}
+
+form{
+    background-color: #F0EBF8;
+    position: relative;
+    margin: 30px auto;
+    /* transform: translate(-50%, -50%); 移動表單本身的寬高，使其正好置中 */
+    display: grid;
+    justify-content: center;
+}
+
+.text_padding{
+    padding: 15px 0px;
+}
+
+.radio_padding{
+    padding: 10px 0px;
+}
+
+.radio{
+    transform: scale(1.7);
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+.align_right{
+    position: absolute;
+    right: 10px;
+}
+
+.text_color_red{
+    color: #DB3025;
+}
+
+.text_color_blue{
+    color: #1A9DF1;
+}
+
+.text_color_grey{
+    color: #5F6368;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.font_size_small{
+    font-size: 15px;
+}
+
+.margin_bottom{
+    margin-bottom: 10px;
+}
+
+.submit_button{
+    background-color: #673AB7;
+    border-radius: 5px;
+    color: white;
+    width: 90px;
+    height: 45px;
+    font-size: large;
+}
+
+.reset_button{
+    background-color: transparent;
+    color: #673AB7;
+    width: 150px;
+    height: 45px;
+    font-size: large;
+}
+
+.button_inline{
+    display: flex;
+    gap: 575px;
+}
+
+.alert{
+    display: none;
+    color: #DB3025;
+    font-size: small;
+}

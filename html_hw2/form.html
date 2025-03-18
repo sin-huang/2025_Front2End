@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google_form</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form class="form" id="form">
+        <section>
+            <h1>F2E02 表單練習</h1>
+            <p class="text_padding">僅供新尖兵 F2E02 表單切版練習作業</p>
+            <hr>
+            <!--這邊應該要抓登入的使用者帳號-->
+            <div class="text_padding">
+                <span class="text_color_grey bold">melody880306@gmail.com</span>
+                <span class="text_color_blue">切換帳戶</span>
+            </div>
+            <!--插入雲朵svg-->
+            <!--插入信箱svg-->
+            <p class="text_padding text_color_grey">未共用的項目</p>
+            <hr>
+            <div class="text_padding text_color_red">* 表示必填問題</div>
+        </section>
+        <section>
+            <div class="text_padding">
+                <span>姓名</span>
+                <span class="text_color_red">*</span>
+            </div>
+            <input class="input_info" id="name" placeholder="您的回答" required>
+            <div id="alert_name" style="display: none; color: #DB3025;"> 
+                這是必填問題    
+            </div>
+        </section>
+        <section>
+            <div class="text_padding">
+                <span>信箱</span>
+                <span class="text_color_red">*</span>
+            </div>
+            <input class="input_info" id="email" placeholder="您的回答" required>
+            <div id="alert_email" style="display: none; color: #DB3025;"> 
+                這是必填問題    
+            </div>
+        </section>
+        <section>
+            <div class="text_padding">生日</div>
+            <p class="font_size_small text_color_grey text_padding">日期</p>
+            <input type="date">
+        </section>
+        <section>
+            <div class="text_padding">想跟老師說的悄悄話</div>
+            <input class="text_padding input_info" placeholder="您的回答">
+        </section>
+        <section>
+            <div class="text_padding">喜歡的顏色</div>
+            <div class="radio_padding">
+                <input class="radio" type="radio" name="favorite_color" id="yellow">
+                <label for="yellow">黃</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="radio" name="favorite_color" id="green">
+                <label for="green">綠</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="radio" name="favorite_color" id="red">
+                <label for="red">紅</label>
+            </div>
+        </section>
+        <section>
+            <div class="text_padding">喜歡吃的飲食類型</div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="chinese">
+                <label for="chinese">中式</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="italy">
+                <label for="italy">義式</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="japanese">
+                <label for="japanese">日式</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="korea">
+                <label for="korea">韓式</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="usa">
+                <label for="usa">美式</label>
+            </div>
+            <div class="radio_padding">
+                <input class="radio" type="checkbox" id="thailand">
+                <label for="thailand">泰式</label>
+            </div>
+        </section>
+        <section>
+            <div class="text_padding">最想去的國家</div>
+            <select>
+                <option value="">日本</option>
+                <option value="">韓國</option>
+                <option value="">泰國</option>
+                <option value="">德國</option>
+                <option value="">英國</option>
+                <option value="">加拿大</option>
+                <option value="">美國</option>
+            </select>
+        </section>
+        <div class="button_inline">
+            <button class="submit_button" type="submit">提交</button>
+            <button class="reset_button" type="reset">清除表單</button>
+        </div>
+    </form>
+
+</body>
+<script src="alert.js"></script>
+</html>
