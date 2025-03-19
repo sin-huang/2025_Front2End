@@ -1,21 +1,23 @@
-document.getElementById('form').addEventListener('submit', (event) => {
+function validateForm(event){
     event.preventDefault();
-    //檢查必填欄位
-    let isFormValid = true;
-    const requiredFields = document.querySelectorAll('input[required]');
-    requiredFields.forEach((input) => {
-        const alertElement = document.getElementById('alert_' + input.id);
-        if(!input.value){
-            isFormValid = false;
-            alertElement.style.display = "block";
-        }else{
-            alertElement.style.display = "none";
-        }
-    });
-    if(isFormValid){
-        alert("表單填寫成功")
+    let inputName = document.getElementById('name');
+    let inputEmail = document.getElementById('email');
+    let alertName = document.getElementById('alert_name');
+    let alertEmail = document.getElementById('alert_email');
+    if(inputName.value === "") {
+        alertName.style.display = "block";
+        inputName.scrollIntoView({behavior: 'smooth'});//滾到到該欄位
+        inputName.focus();//聚焦到輸入框
     }else{
-        alert("尚有必填欄位未填寫")
+        alertName.style.display = "none";
     }
-});
+    if(inputEmail.value === ""){
+        alertEmail.style.display = "block";
+        inputEmail.scrollIntoView({behavior: 'smooth'});
+        inputEmail.focus();
+    }else{
+        alertEmail.style.display = "none";
+    }
+}
 
+    

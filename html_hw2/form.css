@@ -22,7 +22,7 @@ select{
 }
 
 hr{
-    width: 100%;
+    width: 95%;
     border: none;
     border-bottom: 1px solid #5F6368;
     opacity: 0.5;
@@ -30,9 +30,89 @@ hr{
 
 p, div, span, input, label, option{
     font-size: 20px;
-    font-weight: 525;
+    font-weight: 500;
+    color: black;
 }
 
+input::focus{
+    color: black;
+}
+
+section{
+    background-color: white;
+    padding: 30px 0px 30px 30px;
+    border: 1px solid #DADCE0;
+    border-radius: 15px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+form{
+    background-color: #F0EBF8;
+    width: 50%;
+    margin: 10px auto 0px auto;
+}
+
+input:focus{
+    background-color: white !important;
+    border-bottom: 3px solid #490ab5;
+    /*動畫效果 animation:<動畫名稱> <持續時間> <forwards(保持動畫結束時的最終狀態)>*/
+    animation: borderExpand 10s forwards;
+}
+
+@keyframes borderExpand {
+    0% {
+        border-bottom: 3px solid transparent;
+    }
+    10% {
+        border-bottom: 3px solid #490ab5;
+    }
+    30% {
+        border-bottom: 3px solid #490ab5;
+    }
+    50% {
+        border-bottom: 3px solid #490ab5;
+    }
+    70% {
+        border-bottom: 3px solid #490ab5;
+    }
+    100% {
+        border-bottom: 3px solid #490ab5;
+    }
+}
+
+small{
+    font-size: 16px;
+    color: #5F6368;
+}
+
+.date{
+    width: 150px;
+    border: none;
+    border-bottom: 2px solid #5F6368;
+    margin-bottom: 10px;
+    outline: none;
+    opacity: 0.6;
+}
+
+.parent{
+    position: relative;
+}
+.child{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #673AB7;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    height: 18px;
+}
+
+.inline{
+    display: inline;
+    margin-left: 400px;
+}
 .input_info{
     width: 350px;
     border: none;
@@ -40,24 +120,6 @@ p, div, span, input, label, option{
     margin-bottom: 10px;
     outline: none; /* 移除輸入框聚焦時的外邊框 */
     opacity: 0.6;
-}
-
-section{
-    background-color: white;
-    padding: 12px;
-    border: 1px solid #DADCE0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    width: 800px;
-}
-
-form{
-    background-color: #F0EBF8;
-    position: relative;
-    margin: 30px auto;
-    /* transform: translate(-50%, -50%); 移動表單本身的寬高，使其正好置中 */
-    display: grid;
-    justify-content: center;
 }
 
 .text_padding{
@@ -122,11 +184,17 @@ form{
 
 .button_inline{
     display: flex;
-    gap: 575px;
+    gap: 600px;
 }
 
-.alert{
+.error_msg{
     display: none;
     color: #DB3025;
     font-size: small;
+}
+
+.center_location{
+    width: 50%;
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
