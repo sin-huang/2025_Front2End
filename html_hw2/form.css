@@ -121,10 +121,21 @@ small {
   border-top-right-radius: 9px;
   height: 18px;
 }
+.childForCloudLogo {
+  position: absolute;
+  width: 10%;
+  top: 0;
+  right: 0;
+}
+.headerHeight{
+  margin-top: 5px;
+  height: 45px;
+}
 
 .inline {
   display: inline;
-  margin-left: 780px;
+  margin-left: 0 0 0 30%;
+
 }
 .input_info {
   width: 350px;
