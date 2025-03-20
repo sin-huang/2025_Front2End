@@ -1,146 +1,186 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F2E02 表單練習</title>
-    <link rel="icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png" type="image/png">
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="form.css">
+    <link
+      rel="icon"
+      href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="form.css" />
     <script src="alert.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <form class="form" id="form">
-        <section class="parent">
-            <div class="child"></div>
-            <h1>F2E02 表單練習</h1>
-            <p class="text_padding">僅供新尖兵 F2E02 表單切版練習作業</p>
-            <hr>
-            <!--這邊應該要抓登入的使用者帳號-->
-            <div class="text_padding">
-                <span class="text_color_grey bold">xxxx0915@gmail.com</span>
-                <span class="text_color_blue">切換帳戶</span>
-                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                    <g><path fill="#000000" d="M10.35 17 16 11.35 14.55 9.9l-4.225 4.225-2.1-2.1L6.8 13.45ZM6.5 20q-2.275                           0-3.887-1.575Q1 16.85 1 14.575q0-1.95 1.175-3.475Q3.35 9.575 5.25                           9.15q.625-2.3 2.5-3.725Q9.625 4 12 4q2.925 0 4.962 2.037Q19 8.075 19                           11q1.725.2 2.863 1.487Q23 13.775 23 15.5q0 1.875-1.312 3.188Q20.375 20                           18.5 20Zm0-2h12q1.05 0 1.775-.725Q21 16.55 21 15.5q0-1.05-.725-1.775Q19.55                           13 18.5 13H17v-2q0-2.075-1.462-3.538Q14.075 6 12 6 9.925 6 8.463 7.462 7                           8.925 7 11h-.5q-1.45 0-2.475 1.025Q3 13.05 3 14.5q0 1.45 1.025 2.475Q5.05                           18 6.5 18Zm5.5-6Z"/>
-                    </g>
-                </svg>
-            </div>
-            <!--插入雲朵svg-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                <g><path d="M9.354 10.625L2.75 6.5V14.584H9.125C9.125 14.9033 9.14583 15.2018 9.1875 15.4795C9.22917 15.7572 9.29833 16.042 9.395 16.334H2.75C2.264 16.334 1.85083 16.1638 1.5105 15.8235C1.17017 15.4832 1 15.07 1 14.584V4.75C1 4.264 1.17017 3.85083 1.5105 3.5105C1.85083 3.17017 2.264 3 2.75 3H15.937C16.423 3 16.8362 3.17017 17.1765 3.5105C17.5168 3.85083 17.687 4.264 17.687 4.75V9.188C17.423 9.07667 17.1452 8.97583 16.8535 8.8855C16.5618 8.79517 16.2563 8.72933 15.937 8.688V6.5L9.354 10.625ZM9.354 8.875L15.937 4.75H2.75L9.354 8.875Z" fill="#656B6F"/>
-                    <path d="M15.0869 18.775C13.9342 18.775 12.9482 18.3654 12.1289 17.546C11.3096 16.7267 10.8999 15.7407 10.8999 14.588C10.8999 13.4354 11.3096 12.4492 12.1289 11.6295C12.9482 10.8099 13.9342 10.4 15.0869 10.4C16.2396 10.4 17.2257 10.8099 18.0454 11.6295C18.8651 12.4492 19.2749 13.4354 19.2749 14.588C19.2749 15.7407 18.8651 16.7267 18.0454 17.546C17.2257 18.3654 16.2396 18.775 15.0869 18.775ZM13.6289 16.713L15.0869 15.254L16.5459 16.713L17.2119 16.046L15.7539 14.588L17.2119 13.13L16.5459 12.463L15.0869 13.921L13.6289 12.463L12.9619 13.13L14.4199 14.588L12.9619 16.046L13.6289 16.713Z" fill="#656B6F"/>
-                </g>
-            </svg>
-            <p class="text_padding text_color_grey">未共用的項目</p>
-            <hr>
-            <div class="text_padding text_color_red">* 表示必填問題</div>
-        </section>
-        <section>
-            <div class="text_padding">
-                <span>姓名</span>
-                <span class="text_color_red">*</span>
-            </div>
-            <input class="input_info" type="text" id="name" placeholder="您的回答" autocomplete="off">
-            <div id="alert_name" class="error_msg"> 
-                這是必填問題    
-            </div>
-        </section>
-        <section>
-            <div class="text_padding">
-                <span>信箱</span>
-                <span class="text_color_red">*</span>
-            </div>
-            <input class="input_info" type="text" id="email" placeholder="您的回答" autocomplete="off">
-            <div id="alert_email" class="error_msg"> 
-                這是必填問題    
-            </div>
-        </section>
-        <section>
-            <div class="text_padding">生日</div>
-            <p class="font_size_small text_color_grey text_padding">日期</p>
-            <input class="date" type="date" max="2025-03-21">
-        </section>
-        <section>
-            <div class="text_padding">想跟老師說的悄悄話</div>
-            <input class="text_padding input_info" autocomplete="off" placeholder="您的回答">
-        </section>
-        <section>
-            <div class="text_padding">喜歡的顏色</div>
-            <div class="radio_padding">
-                <input class="radio" type="radio" name="favorite_color" id="yellow">
-                <label for="yellow">黃</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="radio" name="favorite_color" id="green">
-                <label for="green">綠</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="radio" name="favorite_color" id="red">
-                <label for="red">紅</label>
-            </div>
-        </section>
-        <section>
-            <div class="text_padding">喜歡吃的飲食類型</div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="chinese">
-                <label for="chinese">中式</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="italy">
-                <label for="italy">義式</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="japanese">
-                <label for="japanese">日式</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="korea">
-                <label for="korea">韓式</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="usa">
-                <label for="usa">美式</label>
-            </div>
-            <div class="radio_padding">
-                <input class="radio" type="checkbox" id="thailand">
-                <label for="thailand">泰式</label>
-            </div>
-        </section>
-        <section>
-            <div class="text_padding">最想去的國家</div>
-            <select>
-                <option value="" selected disabled>請選擇</option>
-                <optgroup value="" label="亞洲">
-                    <option value="">日本</option>
-                    <option value="">韓國</option>
-                    <option value="">泰國</option>
-                </optgroup>
-                <optgroup label="歐洲">
-                    <option value="">德國</option>
-                    <option value="">英國</option>
-                </optgroup>
-                <optgroup label="北美洲">
-                    <option value="">加拿大</option>
-                    <option value="">美國</option>
-                </optgroup>
-            </select>
-        </section>
-        <div class="button_inline">
-            <button onclick="validateForm(event)" class="submit_button">提交</button>
-            <button class="reset_button" type="reset">清除表單</button>
-        </div>
+      <section class="parent">
+        <div class="child"></div>
+        <h1>F2E02 表單練習</h1>
+        <p class="text_padding">僅供新尖兵 F2E02 表單切版練習作業</p>
+        <hr />
         <div class="text_padding">
-            <small>請勿利用 Google 表單送出密碼。</small>
+          <span class="text_color_grey bold">xxxx0915@gmail.com</span>
+          <span class="text_color_blue">切換帳戶</span>
+          <svg
+            class="inline"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <path
+                fill="#000000"
+                d="M10.35 17 16 11.35 14.55 9.9l-4.225 4.225-2.1-2.1L6.8 13.45ZM6.5 20q-2.275                           0-3.887-1.575Q1 16.85 1 14.575q0-1.95 1.175-3.475Q3.35 9.575 5.25                           9.15q.625-2.3 2.5-3.725Q9.625 4 12 4q2.925 0 4.962 2.037Q19 8.075 19                           11q1.725.2 2.863 1.487Q23 13.775 23 15.5q0 1.875-1.312 3.188Q20.375 20                           18.5 20Zm0-2h12q1.05 0 1.775-.725Q21 16.55 21 15.5q0-1.05-.725-1.775Q19.55                           13 18.5 13H17v-2q0-2.075-1.462-3.538Q14.075 6 12 6 9.925 6 8.463 7.462 7                           8.925 7 11h-.5q-1.45 0-2.475 1.025Q3 13.05 3 14.5q0 1.45 1.025 2.475Q5.05                           18 6.5 18Zm5.5-6Z"
+              />
+            </g>
+          </svg>
         </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <path
+              d="M9.354 10.625L2.75 6.5V14.584H9.125C9.125 14.9033 9.14583 15.2018 9.1875 15.4795C9.22917 15.7572 9.29833 16.042 9.395 16.334H2.75C2.264 16.334 1.85083 16.1638 1.5105 15.8235C1.17017 15.4832 1 15.07 1 14.584V4.75C1 4.264 1.17017 3.85083 1.5105 3.5105C1.85083 3.17017 2.264 3 2.75 3H15.937C16.423 3 16.8362 3.17017 17.1765 3.5105C17.5168 3.85083 17.687 4.264 17.687 4.75V9.188C17.423 9.07667 17.1452 8.97583 16.8535 8.8855C16.5618 8.79517 16.2563 8.72933 15.937 8.688V6.5L9.354 10.625ZM9.354 8.875L15.937 4.75H2.75L9.354 8.875Z"
+              fill="#656B6F"
+            />
+            <path
+              d="M15.0869 18.775C13.9342 18.775 12.9482 18.3654 12.1289 17.546C11.3096 16.7267 10.8999 15.7407 10.8999 14.588C10.8999 13.4354 11.3096 12.4492 12.1289 11.6295C12.9482 10.8099 13.9342 10.4 15.0869 10.4C16.2396 10.4 17.2257 10.8099 18.0454 11.6295C18.8651 12.4492 19.2749 13.4354 19.2749 14.588C19.2749 15.7407 18.8651 16.7267 18.0454 17.546C17.2257 18.3654 16.2396 18.775 15.0869 18.775ZM13.6289 16.713L15.0869 15.254L16.5459 16.713L17.2119 16.046L15.7539 14.588L17.2119 13.13L16.5459 12.463L15.0869 13.921L13.6289 12.463L12.9619 13.13L14.4199 14.588L12.9619 16.046L13.6289 16.713Z"
+              fill="#656B6F"
+            />
+          </g>
+        </svg>
+        <p class="text_padding text_color_grey">未共用的項目</p>
+        <hr />
+        <div class="text_padding text_color_red">* 表示必填問題</div>
+      </section>
+      <section>
+        <div class="text_padding">
+          <span>姓名</span>
+          <span class="text_color_red">*</span>
+        </div>
+        <input
+          class="input_info"
+          type="text"
+          id="name"
+          placeholder="您的回答"
+          autocomplete="off"
+        />
+        <div id="alert_name" class="error_msg">這是必填問題</div>
+      </section>
+      <section>
+        <div class="text_padding">
+          <span>信箱</span>
+          <span class="text_color_red">*</span>
+        </div>
+        <input
+          class="input_info"
+          type="text"
+          id="email"
+          placeholder="您的回答"
+          autocomplete="off"
+        />
+        <div id="alert_email" class="error_msg">這是必填問題</div>
+      </section>
+      <section>
+        <div class="text_padding">生日</div>
+        <p class="font_size_small text_color_grey text_padding">日期</p>
+        <input class="date" type="date" max="2025-03-21" />
+      </section>
+      <section>
+        <div class="text_padding">想跟老師說的悄悄話</div>
+        <input class="input_info" autocomplete="off" placeholder="您的回答" />
+      </section>
+      <section>
+        <div class="text_padding">喜歡的顏色</div>
+        <div class="radio_padding">
+          <input class="radio" type="radio" name="favorite_color" id="yellow" />
+          <label for="yellow">黃</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="radio" name="favorite_color" id="green" />
+          <label for="green">綠</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="radio" name="favorite_color" id="red" />
+          <label for="red">紅</label>
+        </div>
+      </section>
+      <section>
+        <div class="text_padding">喜歡吃的飲食類型</div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="chinese" />
+          <label for="chinese">中式</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="italy" />
+          <label for="italy">義式</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="japanese" />
+          <label for="japanese">日式</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="korea" />
+          <label for="korea">韓式</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="usa" />
+          <label for="usa">美式</label>
+        </div>
+        <div class="radio_padding">
+          <input class="radio" type="checkbox" id="thailand" />
+          <label for="thailand">泰式</label>
+        </div>
+      </section>
+      <section>
+        <div class="text_padding">最想去的國家</div>
+        <select>
+          <option value="" selected disabled>請選擇</option>
+          <optgroup value="" label="亞洲">
+            <option value="日本">日本</option>
+            <option value="韓國">韓國</option>
+            <option value="泰國">泰國</option>
+          </optgroup>
+          <optgroup label="歐洲">
+            <option value="德國">德國</option>
+            <option value="英國">英國</option>
+          </optgroup>
+          <optgroup label="北美洲">
+            <option value="加拿大">加拿大</option>
+            <option value="美國">美國</option>
+          </optgroup>
+        </select>
+      </section>
+      <div class="button_inline">
+        <button onclick="validateForm(event)" class="submit_button">
+          提交
+        </button>
+        <button class="reset_button" type="reset">清除表單</button>
+      </div>
+      <div class="text_padding">
+        <small>請勿利用 Google 表單送出密碼。</small>
+      </div>
     </form>
     <footer>
-        <div class="center_location">
-            <small class="text_center">這份表單是在 五倍紅寶石程式資訊教育股份有限公司 中建立</small>
-            <br>
-            <small>Does this form look suspicious? 報告</small>
-            <br>
-            <a  target="_blank" href="https://workspace.google.com/products/forms/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms">Google表單</a>
-        </div>
+      <div class="center_location">
+        <small class="text_center"
+          >這份表單是在 五倍紅寶石程式資訊教育股份有限公司 中建立</small
+        >
+        <br />
+        <small>Does this form look suspicious? 報告</small>
+        <br />
+        <a
+          target="_blank"
+          href="https://workspace.google.com/products/forms/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms"
+          >Google表單</a
+        >
+      </div>
     </footer>
-</body>
+  </body>
 </html>

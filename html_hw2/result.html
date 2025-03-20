@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表單結果</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <form class="form" id="form">
+      <section class="parent">
+        <div class="child"></div>
+        <h2>填寫結果顯示如下 請確認</h2>
+      </section>
+      <section>
+        <div class="text_padding">
+          <span>姓名 : </span>
+        </div>
+        <p id="name"></p>
+      </section>
+      <section>
+        <div class="text_padding">
+          <span>信箱 : </span>
+        </div>
+        <p id="email"></p>
+      </section>
+      <section>
+        <div class="text_padding">生日 :</div>
+        <p id="birthday"></p>
+      </section>
+      <section>
+        <div class="text_padding">想跟老師說的悄悄話 :</div>
+        <p id="qa"></p>
+      </section>
+      <section>
+        <div class="text_padding">喜歡的顏色 :</div>
+        <p id="fav_color"></p>
+      </section>
+      <section>
+        <div class="text_padding">喜歡吃的飲食類型 :</div>
+        <p id="fav_food"></p>
+      </section>
+      <section>
+        <div class="text_padding">最想去的國家 :</div>
+        <p id="dream_country"></p>
+      </section>
+    </form>
+    <footer>
+      <div class="center_location">
+        <small class="text_center"
+          >這份表單是在 五倍紅寶石程式資訊教育股份有限公司 中建立</small
+        >
+        <br />
+        <small>Does this form look suspicious? 報告</small>
+        <br />
+        <a
+          target="_blank"
+          href="https://workspace.google.com/products/forms/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms"
+          >Google表單</a
+        >
+      </div>
+    </footer>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      let myName = params.get("name") || "未填寫";
+      let myEmail = params.get("email") || "未填寫";
+      let myBirthday = params.get("birthday") || "未填寫";
+      let myMsg = params.get("message") || "未填寫";
+      let myColor = params.get("favoriteColor") || "未選擇";
+      let favFood = params.get("favoriteFood") || "未選擇";
+      let country = params.get("country") || "未選擇";
+      document.getElementById("name").innerHTML = myName;
+      document.getElementById("email").innerHTML = myEmail;
+      document.getElementById("birthday").innerHTML = myBirthday;
+      document.getElementById("qa").innerHTML = myMsg;
+      document.getElementById("fav_color").innerHTML = myColor;
+      document.getElementById("fav_food").innerHTML = favFood;
+      document.getElementById("dream_country").innerHTML = country;
+    </script>
+  </body>
+</html>

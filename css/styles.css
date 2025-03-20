@@ -1,4 +1,0 @@
-/* 隱藏登入與歡迎區塊，JavaScript 會控制顯示 */
-#loginForm, #welcomeSection {
-    display: none;
-}
